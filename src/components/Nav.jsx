@@ -1,0 +1,32 @@
+import Link from 'next/link'
+
+import {usePathname} from 'next/navigation'
+
+import {motion} from 'framer-motion'
+
+const links= [
+    {path: '/', name:'inicio'},
+    {path: '/proyectos', name:'mis proyectos'},
+    {path: '/contacto', name:'contacto'}
+]
+
+export const Nav = ({containerStyles, linkStyles, underlineStyles}) => {
+    const path = usePathname();
+
+  return (
+    <nav className={`${containerStyles}`}>
+        {links.map((link, index)=>{
+        return <Link href={link.path} key={index} className={`capitalize ${linkStyles}`} style={{ marginRight: '30px' }}>
+            {link.path === path && (
+                <motion.span initial={{y: '-100%'}} animate={{y:0}} 
+                transition={{type:'tween'}} 
+                layoutId='underline' 
+                className={`${underlineStyles}`} />
+            )}
+            {link.name}</Link>
+})}
+    </nav>
+  )
+}
+
+export default Nav
