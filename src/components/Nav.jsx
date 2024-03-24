@@ -7,7 +7,7 @@ import {motion} from 'framer-motion'
 const links= [
     {path: '/', name:'inicio'},
     {path: '/proyectos', name:'mis proyectos'},
-    {path: '/contacto', name:'contacto'}
+  
 ]
 
 export const Nav = ({containerStyles, linkStyles, underlineStyles}) => {
