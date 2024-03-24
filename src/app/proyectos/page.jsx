@@ -37,7 +37,7 @@ const projectData = [
     name: 'CRUD Registro Sensores de Monitoreo - Wenu Work ',
     description:
     'Proyecto 2: CRUD - Bootcamp Desarrollo Web Full Stack UDD',
-    link: '/',
+    link: 'https://github.com/pmoraga1/proyecto-2',
     github: 'https://github.com/pmoraga1/proyecto-2'
   },
   {

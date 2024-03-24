@@ -154,7 +154,7 @@ export const About = () => {
                                         <div className='flex flex-col gap-y-2'>
                                             <div className='text-primary'>Idiomas</div>
                                             <div className='border-b border-border'></div>
-                                            <div>Español, Inglés</div>
+                                            <div>Español Nativo, Inglés Intermedio</div>
                                         </div>
                                     </div>
                                 </TabsContent>

@@ -23,7 +23,7 @@ const Hero = () => {
                 <div className='flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left'>
                     <div className='text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]'>DESARROLLADORA WEB FULL STACK</div>
                     <h1 className='h1 mb-4'> Hola, mi nombre es Paulina Moraga</h1>
-                    <p className='subtitle max-w-[490px] mx-auto xl:mx-0'> ¡Y estoy comenzando en el mundo del Desarrollo Web Full Stack! De profesión Ingeniera Civil Industrial con más de 8 años de experiencia en el mundo de la tecnología y energía, decidí el año 2023 aventurarme en un Bootcamp de Desarrollo Web Full Stack. </p>
+                    <p className='subtitle max-w-[490px] mx-auto xl:mx-0'> ¡Y estoy comenzando en el mundo del Desarrollo Web Full Stack! De profesión Ingeniera Civil Industrial con más de 8 años de experiencia en el mundo de la tecnología y energía, decidí el año 2023 aventurarme sin tener conocimientos previos en un Bootcamp de Desarrollo Web Full Stack. </p>
                     <div className='flex flex-col gap-3 md:flex-row gap-x-m mx-auto xl:mx-0 mb-12'>
                     <Link href='mailto:paulimoraga@gmail.com'>
                     <Button className='gap-x-2'>Contáctame<Send size={18}/></Button>
