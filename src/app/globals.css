@@ -68,7 +68,7 @@
 }
 
 .h1{
-  font-size: 6rem; 
+  font-size: 4rem; 
   line-height: 80px; 
   letter-spacing: -2px; 
   font-weight: bold; 
@@ -121,4 +121,9 @@
   .section-title::before {
     background-image: url('/dots-dark.svg'); 
   }
+}
+
+.swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: var(--primary);
 }

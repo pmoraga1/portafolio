@@ -32,25 +32,27 @@ const qualificationData = [
     {
         title: 'educación',
         data: [
+
             {
-                university: 'Pontificia Universidad Católica',
-                qualification: 'Ingeniera Civil Industrial',
-                years: '2010-2016'
+                university: 'Universidad del Desarrollo',
+                qualification: 'Bootcamp Desarrollo Web Full Stack',
+                years: '2023-2024'
+            },
+            {
+                university: 'EADA Business School',
+                qualification: 'Master en Dirección de Empresas Digitales',
+                years: '2021-2022'
             },
             {
                 university: 'Pontificia Universidad Católica',
-                qualification: 'Ingeniera Civil Industrial',
-                years: '2010-2016'
-            },
-            {
-                university: 'Pontificia Universidad Católica',
-                qualification: 'Ingeniera Civil Industrial',
+                qualification: 'Ingeniería Civil Industrial, mención Ambiental',
                 years: '2010-2016'
             }
+
         ]
     },
     {
-        title: 'experiencia',
+        title: 'experiencia laboral',
         data: [
             {
                 company: 'Wenu Work',
@@ -69,13 +71,25 @@ const skillData = [
                 name: 'HTMl, CSS'
             },
             {
-                name: 'Front-end Development'
-            },
-            {
                 name: 'Javascript'
             },
             {
-                name: 'Back-end Development'
+                name: 'React.js'
+            },
+            {
+                name: 'Vite'
+            },
+            {
+                name: 'Express'
+            },
+            {
+                name: 'MongoDB, Firebase'
+            },
+            {
+                name: 'Next.js'
+            },
+            {
+                name: 'Github, Visual Studio Code'
             }
 
         ]
@@ -111,24 +125,21 @@ export const About = () => {
             <div className="container mx-auto">
                 <h2 className='section-title mb-8 xl:mb16 text-center mx-auto'>Sobre mí</h2>
                 <div className='flex flex-col xl:flex-row'>
-                    <div className='hidden xl:flex flex-1 relative'>
-                        <DevImg containerStyles='bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative' imgScr='/about/developer.png' />
-                    </div>
-                    <div className='flex-1'>
+                    <div className='flex-1 flex items-center justify-center'>
                         <Tabs defaultValue='personal'>
 
                             <TabsList className='w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none'>
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='personal'>Información</TabsTrigger>
-                                <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>Qualifications</TabsTrigger>
+                                <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>Experiencias</TabsTrigger>
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='herramientas'>Herramientas</TabsTrigger>
                             </TabsList>
                             <div className='text-lg mt-12 xl:mt-8'>
                                 <TabsContent value='personal'>
                                     <div className='text-center xl:text-left'>
                                         <h3 className='h3 mb-4'>
-                                            Unmatchef Service Quality for over 10 years
+                                          Información Personal
                                         </h3>
-                                        <p className='subtitle max-w-xl max-auto xl:mx-0'>I specialize in crafting intutite website </p>
+                                        <p className='subtitle max-w-xl max-auto xl:mx-0'> </p>
                                         <div className='grid xl:grid-cols-2 gap-4 mb-12'>
                                             {infoData.map((item, index) => {
                                                 return <div className="flex items-center gap-x-4 mx-auto xl:mx-0"
@@ -150,17 +161,17 @@ export const About = () => {
 
                                 <TabsContent value='qualifications'>
                                     <div>
-                                        <h3 className='h3 mb-y text-center xl:text-left'>My awesome Journey</h3>
+                                        <h3 className='h3 mb-y text-center xl:text-left'></h3>
                                         <div className='grid md:grid-cols-2 gap-y-8'>
                                             <div className='flex flex-col gap-y-6'>
                                                 <div className='flex gap-x-4 items-center text-[22px] text-primary'>
                                                     <Briefcase />
                                                     <h4 className='capitalize font-medium'>
-                                                        {getData(qualificationData, 'experiencia').title}
+                                                        {getData(qualificationData, 'experiencia laboral').title}
                                                     </h4>
                                                 </div>
                                                 <div className='flex flex-col gap-y-8'>
-                                                    {getData(qualificationData, 'experiencia').data.map((item, index)=>{
+                                                    {getData(qualificationData, 'experiencia laboral').data.map((item, index)=>{
                                                         const {company, role, years}=item
                                                     return(
                                                     <div className='flex gap-x-8 group ' key={index}>
@@ -209,10 +220,10 @@ export const About = () => {
                                 <TabsContent value='herramientas'>
                                     <div className='text-center xl:text-left'>
                                         <h3 className='hm mb-8'>
-                                            Herramientas que uso
+                                          
                                         </h3>
                                         <div>
-                                            <h4 className='text-xl font-semibold mb-2'>Skills</h4>
+                                            <h4 className='text-xl font-semibold mb-2'>Habilidades y herramientas</h4>
                                             <div className='border-b border-border mb-4'></div>
                                             <div>
                                                 {getData(skillData, 'habilidades').data.map((item,index)=>{
@@ -224,18 +235,7 @@ export const About = () => {
                                                 })}
                                             </div>
                                         </div>
-                                        <div>
-                                            <h4 className='text-xl font-semibold mb-2 xl:text-left'>Herramientas</h4>
-                                            <div className='border-b border-border mb-4'></div>
-                                            <div className='flex gap-x-8 justify-center xl:justify-start'>
-                                                {getData(skillData, 'herramientas').data.map((item, index)=>{
-                                                    const {imgPath} = item
-                                                    return <div>
-                                                        <Image src={imgPath} width={48} height={48} alt='' priority />
-                                                    </div>
-                                                })}
-                                            </div>
-                                            </div>
+
                                     </div>
                                 </TabsContent>
 
